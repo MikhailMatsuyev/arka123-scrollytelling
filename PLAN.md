@@ -116,42 +116,77 @@ Character consistency is required across all generated scenes.
 
 6. Technical Concept
 
-The technical implementation is intentionally not fixed yet.
+Selected Direction
 
-Possible approaches:
+The selected approach for Task №4 is:
 
-image sequence controlled by scroll;
+Real ARKA photos + AI-assisted assets + 2.5D camera + GSAP scroll + character compositing.
 
-Canvas-based animation;
+The experience will be built primarily from the real ARKA 123 photographs rather than fully AI-generated environments or a complete 3D reconstruction.
 
-video controlled by scroll;
+The goal is to create the illusion of continuous camera movement through the real location while the user scrolls the page.
 
-layered images with parallax;
+Core Pipeline
 
-CSS / JavaScript animation;
+Use real ARKA 123 photographs as key scenes.
 
-3D / WebGL if justified.
+Prepare and, where necessary, extend or clean images using AI tools.
 
-The final approach should be selected according to:
+Create 2.5D depth/parallax effects for selected key scenes.
 
-visual quality;
+Animate virtual camera movement using zoom, pan and layered parallax.
 
-ability to use free AI generation tools;
+Transition between photographs using shared architectural features, masks, crossfades and camera movement.
 
-implementation time;
+Composite the brand character into selected interior scenes.
 
-browser performance;
+Control the complete visual sequence using GSAP / ScrollTrigger.
 
-mobile compatibility;
+Planned Visual Journey
 
-ease of integration into a real website.
+The preliminary camera journey is:
 
-Preferred direction
+Exterior → office windows → entrance → reception → interior → arched windows → National Library
 
-Prefer generating a limited number of high-quality AI keyframes/assets and creating the majority of motion in the browser.
+The visitor begins outside the building and gradually approaches ARKA 123.
 
-Avoid depending on expensive AI video generation unless a free solution proves sufficient.
+The camera then enters the space and continues through the interior.
 
+The brand character appears inside the space, welcomes the visitor and helps guide attention toward the main architectural feature — the large arched windows.
+
+The visual climax is the view of the National Library through the windows, connecting the experience with the slogan:
+
+«Встречаемся напротив Библиотеки.»
+
+Prototype Strategy
+
+Before implementing the complete experience, create a small proof of concept using the first exterior photographs.
+
+The prototype must verify that several separate real photographs can create a convincing feeling of continuous forward camera movement during scrolling.
+
+Only after this approach is visually validated should the complete journey and character integration be implemented.
+
+Technical Priorities
+
+The implementation should prioritize:
+
+Visual continuity between scenes.
+
+Preservation of the real ARKA 123 architecture.
+
+Smooth scroll-controlled movement.
+
+Good browser performance.
+
+Free or free-tier AI tools.
+
+Minimal dependence on generated video.
+
+Progressive enhancement for more advanced 2.5D effects.
+
+React is not required for the core animation and should only be introduced if it provides a clear architectural benefit.
+
+The core experience will primarily rely on GSAP / ScrollTrigger, browser rendering technologies (Canvas and/or DOM layers), and optimized visual assets.
 7. AI Generation Strategy
 
 The project should primarily use free AI tools / free tiers.
@@ -371,3 +406,69 @@ They may only be simulated or represented where necessary to demonstrate how Tas
 The final result should demonstrate one thing clearly:
 
 The candidate can use AI as a production tool to create a commercially usable interactive web experience, rather than simply generating attractive images or code.
+
+14. Source Materials
+
+Office Photos
+
+The processed office photos provided for the ARKA 123 test assignment:
+
+Office entrance.png
+
+Office interior.png
+
+Office interior and features.png
+
+Office interior 2.png
+
+office windows from outside.png
+
+reception.png
+
+View from the window.png
+
+View from the windows.png
+
+View from the windows toward the library.png
+
+View of the office from outside.png
+
+View of the office windows from outside closest.png
+
+These images are the primary visual reference for the ARKA 123 space.
+
+Usage Rules
+
+The office photos should be treated as the visual source of truth for:
+
+interior architecture;
+
+room proportions;
+
+windows;
+
+entrance;
+
+reception area;
+
+exterior appearance;
+
+view from the windows;
+
+relationship between the office and the surrounding architecture.
+
+AI-generated elements must be integrated with these references and should not significantly distort the real architecture or layout.
+
+The most important visual elements for Task №4 are:
+
+The office interior.
+
+The large arched windows.
+
+The view toward the National Library.
+
+The exterior appearance of the office.
+
+The entrance / reception area.
+
+These materials will be used to develop the storyboard and determine which parts should be generated, composited or animated.
