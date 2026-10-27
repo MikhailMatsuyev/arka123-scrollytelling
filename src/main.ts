@@ -9,61 +9,61 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <div class="hero__viewport">
       <img
         class="hero__image hero__image--1"
-        src="/photos/exterior-1.png"
+        src="${import.meta.env.BASE_URL}photos/exterior-1.png"
         alt="ARKA 123 exterior"
       />
 
       <img
         class="hero__image hero__image--2"
-        src="/photos/exterior-2.png"
+        src="${import.meta.env.BASE_URL}photos/exterior-2.png"
         alt="ARKA 123 windows"
       />
 
       <img
         class="hero__image hero__image--3"
-        src="/photos/exterior-3.png"
+        src="${import.meta.env.BASE_URL}photos/exterior-3.png"
         alt="ARKA 123 close view"
       />
       
       <img class="hero__image hero__image--4"
-       src="/photos/entrance.png"
+       src="${import.meta.env.BASE_URL}photos/entrance.png"
         alt="ARKA 123 entrance" 
       />
       
       <img class="hero__image hero__image--5"
-       src="/photos/reception.png"
+       src="${import.meta.env.BASE_URL}photos/reception.png"
        alt="ARKA 123 reception" 
       />
       
       <img class="hero__image hero__image--6"
-       src="/photos/interior-1.png"
+       src="${import.meta.env.BASE_URL}photos/interior-1.png"
        alt="ARKA 123 interior" 
       />
       
       <img class="hero__image hero__image--7"
-       src="/photos/interior-2.png"
+       src="${import.meta.env.BASE_URL}photos/interior-2.png"
        alt="ARKA 123 interior view" 
       />
       
       <img class="hero__image hero__image--8"
-       src="/photos/windows-1.png"
+       src="${import.meta.env.BASE_URL}photos/windows-1.png"
        alt="ARKA 123 windows" 
       />
       
       <img class="hero__image hero__image--9"
-       src="/photos/windows-2.png"
+       src="${import.meta.env.BASE_URL}photos/windows-2.png"
        alt="ARKA 123 window view" 
       />
       
       <img class="hero__image hero__image--10"
-       src="/photos/library.png"
+       src="${import.meta.env.BASE_URL}photos/library.png"
        alt="View toward the National Library"
       />
       
       <div class="hero__character" aria-hidden="true">
         <img
           class="hero__character-image"
-          src="/character/hero-welcome.png"
+          src="${import.meta.env.BASE_URL}photos/hero-welcome.png"
           alt=""
         />
       </div>
