@@ -153,14 +153,114 @@ The visual climax is the view of the National Library through the windows, conne
 
 ### Brand Hero
 
-Brand Hero: an attractive female ARKA 123 host in a modern business / smart-casual style. She welcomes visitors and guides them through the space.
+The hero is a 32-year-old attractive woman with dark hair, approximately 165 cm tall, wearing a modern smart-casual business outfit.
 
-The character should be visually integrated into the real ARKA 123 photography and act as a recurring guide throughout the scrollytelling experience.
+She has a friendly, warm, approachable, and charming appearance. She acts as the ARKA 123 host, welcoming visitors and guiding them through the space.
 
-The hero should have multiple consistent poses and natural interaction with the environment, matching the
+The hero wears a subtle ARKA 123 branded badge with the company logo.
 
+Her appearance, hairstyle, clothing, proportions, and overall visual identity must remain consistent across all generated poses and scenes.
 
-## Scene Structure
+The character should be visually integrated into the real ARKA 123 photography, matching the perspective, lighting, scale, and atmosphere of each scene.
+
+### Hero Interaction & Poses
+
+The hero should appear as a natural host and guide rather than as a static character placed over the background.
+
+The main interaction states are:
+
+1. Welcome — she meets the visitor near the entrance and invites them inside.
+2. Guide — she leads the visitor forward and gestures toward the space.
+3. Show — she presents the interior and its features.
+4. Window / Library — she guides attention toward the arched windows and the view of the National Library.
+
+The poses should form a continuous visual sequence rather than a collection of unrelated static images.
+
+The character should use consistent facial features, hairstyle, clothing, proportions, and branding across all poses.
+
+### Scene Structure
+
+Hero appearance:
+- Entrance: Welcome pose.
+- Reception: Guide pose.
+- Interior: Show pose.
+- Arched Windows / Library: Window / Library pose.
+
+Scroll Camera Flow
+
+The experience should feel like one continuous camera journey through the ARKA 123 space rather than a sequence of unrelated images.
+
+The scroll controls the camera movement and determines the progression through the scenes.
+
+1. Exterior Approach
+
+Start with a wide exterior view of ARKA 123.
+
+The camera slowly moves forward toward the building.
+
+Use scale, position, and subtle parallax to create the impression of physical movement.
+
+Transition naturally from the distant exterior view to the closer exterior view.
+
+2. Entrance
+
+Continue the forward camera movement toward the entrance.
+
+Introduce the Brand Hero near the entrance using the Welcome pose.
+
+The camera passes through the entrance and transitions into the interior.
+
+3. Reception
+
+The camera continues moving forward through the reception area.
+
+The Brand Hero uses the Guide pose and visually directs the visitor further into the space.
+
+Use subtle camera movement and parallax to maintain the feeling of continuous motion.
+
+4. Interior
+
+Gradually reveal the main ARKA 123 interior.
+
+The Brand Hero uses the Show pose and presents the space.
+
+The camera moves deeper into the room while maintaining visual continuity with the previous scene.
+
+5. Arched Windows
+
+The camera gradually shifts its attention toward the distinctive arched windows.
+
+The Brand Hero uses the Window / Library pose.
+
+The movement should make the windows feel like the natural destination of the journey.
+
+6. Library Climax
+
+The camera moves through or toward the arched window view.
+
+The National Library becomes the main visual focus.
+
+The Brand Hero remains secondary to the view and does not obstruct the final composition.
+
+The sequence should end with a calm, visually strong composition emphasizing the ARKA 123 location and its connection to the National Library.
+
+Camera Movement Principles
+
+The camera movement should be based primarily on:
+
+smooth scale changes;
+
+horizontal and vertical positioning;
+
+subtle parallax between foreground and background layers;
+
+depth-based movement where additional depth information is available;
+
+smooth scene transitions controlled by scroll position.
+
+The goal is to create the illusion of a continuous 3D camera movement using real 2D photography and selected AI-generated depth/assets rather than generating a complete 3D environment.
+
+The scroll position should directly control the camera state, allowing the user to move forward and backward through the experience without breaking scene continuity.
 
 ### 1. Exterior Approach
 
@@ -312,11 +412,20 @@ The core experience will primarily rely on:
 ---
 
 # 7. AI Generation Strategy
+AI should be used selectively, not as the primary video generator.
 
-The project should primarily use free AI tools / free tiers.
+Possible AI usage:
+- character
+- poses
+- image cleanup/extension
+- depth maps
+- selected transitional visuals/effects
 
-AI should be used selectively as a production tool, not as the primary video-generation method.
-
+Browser handles:
+- camera movement
+- scroll control
+- parallax
+- sequence playback
 ### Possible AI tasks
 
 AI may be used for:
