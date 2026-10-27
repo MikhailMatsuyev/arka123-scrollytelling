@@ -74,27 +74,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 const images = gsap.utils.toArray<HTMLElement>('.hero__image')
 
-const depth = images.map((_, index) => {
-  if (index <= 2) return 0.92
-  if (index <= 4) return 0.96
-  if (index <= 6) return 1
-  if (index <= 8) return 1.04
-  return 1.08
-})
-
 gsap.set(images, {
   transformOrigin: 'center center',
   force3D: true,
 })
-
-const cameraDepth = {
-  exterior: 1,
-  entrance: 1.15,
-  reception: 1.2,
-  interior: 1.25,
-  windows: 1.15,
-  library: 1.08,
-}
 
 const timeline = gsap.timeline({
   scrollTrigger: {
