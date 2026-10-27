@@ -4,53 +4,36 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const app = document.querySelector<HTMLDivElement>('#app')
-
-if (!app) {
-  throw new Error('App root not found')
-}
-
-app.innerHTML = `
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main class="hero">
     <div class="hero__viewport">
-      <div class="hero__scene">
-        <img
-          class="hero__image hero__image--1"
-          src="/photos/exterior-1.webp"
-          alt="ARKA 123 exterior"
-        />
+      <img
+        class="hero__image hero__image--1"
+        src="/photos/exterior-1.png"
+        alt="ARKA 123 exterior"
+      />
 
-        <img
-          class="hero__image hero__image--2"
-          src="/photos/exterior-2.webp"
-          alt=""
-        />
+      <img
+        class="hero__image hero__image--2"
+        src="/photos/exterior-2.png"
+        alt="ARKA 123 windows"
+      />
 
-        <img
-          class="hero__image hero__image--3"
-          src="/photos/exterior-3.webp"
-          alt=""
-        />
-      </div>
+      <img
+        class="hero__image hero__image--3"
+        src="/photos/exterior-3.png"
+        alt="ARKA 123 close view"
+      />
 
       <div class="hero__label">
         <span>АРКА 123</span>
+        <span>Встречаемся напротив Библиотеки.</span>
       </div>
     </div>
   </main>
 `
 
-const scene = document.querySelector<HTMLElement>('.hero__scene')
-const image1 = document.querySelector<HTMLImageElement>('.hero__image--1')
-const image2 = document.querySelector<HTMLImageElement>('.hero__image--2')
-const image3 = document.querySelector<HTMLImageElement>('.hero__image--3')
-
-if (!scene || !image1 || !image2 || !image3) {
-  throw new Error('Hero elements not found')
-}
-
-gsap.set(image2, { opacity: 0 })
-gsap.set(image3, { opacity: 0 })
+const images = gsap.utils.toArray<HTMLElement>('.hero__image')
 
 const timeline = gsap.timeline({
   scrollTrigger: {
@@ -63,46 +46,46 @@ const timeline = gsap.timeline({
 })
 
 timeline
-  .to(image1, {
-    scale: 1.12,
-    xPercent: -2,
+  .set(images[0], {
+    scale: 1.05,
+    xPercent: -1,
     yPercent: -1,
-    duration: 1,
-    ease: 'none',
   })
-  .to(image2, {
+  .to(images[0], {
+    scale: 1.2,
+    xPercent: 2,
+    yPercent: 0,
+    duration: 1,
+  })
+  .to(images[1], {
     opacity: 1,
-    scale: 1.04,
-    duration: 0.8,
-    ease: 'none',
-  })
-  .to(image1, {
-    opacity: 0,
-    duration: 0.35,
-    ease: 'none',
-  })
-  .to(image2, {
-    scale: 1.16,
+    scale: 1.05,
     xPercent: -2,
+    duration: 0.8,
+  })
+  .to(images[0], {
+    opacity: 0,
+    duration: 0.7,
+  }, '<')
+  .to(images[1], {
+    scale: 1.22,
+    xPercent: 2,
     yPercent: -1,
     duration: 1,
-    ease: 'none',
   })
-  .to(image3, {
+  .to(images[2], {
     opacity: 1,
-    scale: 1.03,
-    duration: 0.8,
-    ease: 'none',
-  })
-  .to(image2, {
-    opacity: 0,
-    duration: 0.35,
-    ease: 'none',
-  })
-  .to(image3, {
-    scale: 1.14,
+    scale: 1.05,
     xPercent: -2,
-    yPercent: -1,
+    duration: 0.8,
+  })
+  .to(images[1], {
+    opacity: 0,
+    duration: 0.7,
+  }, '<')
+  .to(images[2], {
+    scale: 1.2,
+    xPercent: 2,
+    yPercent: 0,
     duration: 1,
-    ease: 'none',
   })
