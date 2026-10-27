@@ -183,6 +183,7 @@ The character should use consistent facial features, hairstyle, clothing, propor
 ### Scene Structure
 
 Hero appearance:
+
 - Entrance: Welcome pose.
 - Reception: Guide pose.
 - Interior: Show pose.
@@ -414,9 +415,11 @@ The core experience will primarily rely on:
 ---
 
 # 7. AI Generation Strategy
+
 AI should be used selectively, not as the primary video generator.
 
 Possible AI usage:
+
 - character
 - poses
 - image cleanup/extension
@@ -424,10 +427,12 @@ Possible AI usage:
 - selected transitional visuals/effects
 
 Browser handles:
+
 - camera movement
 - scroll control
 - parallax
 - sequence playback
+
 ### Possible AI tasks
 
 AI may be used for:
