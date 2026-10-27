@@ -24,6 +24,26 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         src="/photos/exterior-3.png"
         alt="ARKA 123 close view"
       />
+      
+      <img class="hero__image hero__image--4"
+       src="/photos/entrance.png"
+        alt="ARKA 123 entrance" 
+      />
+      
+      <img class="hero__image hero__image--5"
+       src="/photos/reception.png"
+        alt="ARKA 123 reception" 
+      />
+      
+      <img class="hero__image hero__image--6"
+       src="/photos/interior-1.png"
+        alt="ARKA 123 interior" 
+      />
+      
+      <img class="hero__image hero__image--7"
+       src="/photos/interior-2.png"
+        alt="ARKA 123 interior view" 
+      />
 
       <div class="hero__label">
         <span>АРКА 123</span>
@@ -39,7 +59,7 @@ const timeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.hero',
     start: 'top top',
-    end: '+=3000',
+    end: '+=7000',
     scrub: true,
     pin: '.hero__viewport',
   },
@@ -87,5 +107,70 @@ timeline
     scale: 1.2,
     xPercent: 2,
     yPercent: 0,
+    duration: 1,
+  })
+  .to(images[3], {
+    opacity: 1,
+    scale: 1.08,
+    xPercent: 0,
+    duration: 1,
+  })
+  .to(images[2], {
+    opacity: 0,
+    scale: 1.22,
+    duration: 1,
+  }, '<')
+  .to(images[3], {
+    scale: 1.16,
+    duration: 1,
+  })
+  .to(images[4], {
+    opacity: 1,
+    scale: 1.08,
+    xPercent: 0,
+    duration: 1,
+  })
+  .to(images[3], {
+    opacity: 0,
+    scale: 1.2,
+    duration: 1,
+  }, '<')
+  .to(images[4], {
+    scale: 1.16,
+    xPercent: 1,
+    duration: 1,
+  })
+  .to(images[5], {
+    opacity: 1,
+    scale: 1.06,
+    xPercent: -1,
+    duration: 1,
+  })
+  .to(images[4], {
+    opacity: 0,
+    scale: 1.2,
+    duration: 1,
+  }, '<')
+  .to(images[5], {
+    scale: 1.16,
+    xPercent: 2,
+    yPercent: -1,
+    duration: 1,
+  })
+  .to(images[6], {
+    opacity: 1,
+    scale: 1.05,
+    xPercent: -2,
+    duration: 1,
+  })
+  .to(images[5], {
+    opacity: 0,
+    scale: 1.2,
+    duration: 1,
+  }, '<')
+  .to(images[6], {
+    scale: 1.18,
+    xPercent: 2,
+    yPercent: -1,
     duration: 1,
   })
