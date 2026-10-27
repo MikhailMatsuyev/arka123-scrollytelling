@@ -264,7 +264,7 @@ The goal is to create the illusion of a continuous 3D camera movement using real
 
 The scroll position should directly control the camera state, allowing the user to move forward and backward through the experience without breaking scene continuity.
 
-### 1. Exterior Approach
+#### 1. Exterior Approach
 
 Source images:
 
@@ -287,7 +287,7 @@ Possible techniques:
 
 ---
 
-### 2. Entrance
+#### 2. Entrance
 
 Source image:
 
@@ -299,7 +299,7 @@ The goal is to create the feeling that the camera has physically entered the ARK
 
 ---
 
-### 3. Reception
+#### 3. Reception
 
 Source image:
 
@@ -313,7 +313,7 @@ The brand character has already been introduced at the entrance and continues gu
 
 ---
 
-### 4. Interior
+#### 4. Interior
 
 Source images:
 
@@ -338,7 +338,7 @@ The character should feel like a host who welcomes and guides the visitor rather
 
 ---
 
-### 5. Arched Windows
+#### 5. Arched Windows
 
 Source images:
 
@@ -357,7 +357,7 @@ This creates a connection between:
 
 ---
 
-### 6. National Library Climax
+#### 6. National Library Climax
 
 Source image:
 
