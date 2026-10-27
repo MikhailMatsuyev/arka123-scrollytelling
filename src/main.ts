@@ -32,18 +32,38 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       
       <img class="hero__image hero__image--5"
        src="/photos/reception.png"
-        alt="ARKA 123 reception" 
+       alt="ARKA 123 reception" 
       />
       
       <img class="hero__image hero__image--6"
        src="/photos/interior-1.png"
-        alt="ARKA 123 interior" 
+       alt="ARKA 123 interior" 
       />
       
       <img class="hero__image hero__image--7"
        src="/photos/interior-2.png"
-        alt="ARKA 123 interior view" 
+       alt="ARKA 123 interior view" 
       />
+      
+      <img class="hero__image hero__image--8"
+       src="/photos/windows-1.png"
+       alt="ARKA 123 windows" 
+      />
+      
+      <img class="hero__image hero__image--9"
+       src="/photos/windows-2.png"
+       alt="ARKA 123 window view" 
+      />
+      
+      <img class="hero__image hero__image--10"
+       src="/photos/library.png"
+       alt="View toward the National Library"
+      />
+      
+      <div class="hero__character" aria-hidden="true">
+        <div class="hero__vignette" aria-hidden="true">
+        </div>
+      </div>
 
       <div class="hero__label">
         <span>АРКА 123</span>
@@ -55,11 +75,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 const images = gsap.utils.toArray<HTMLElement>('.hero__image')
 
+gsap.set(images, {
+  transformOrigin: 'center center',
+  force3D: true,
+})
+
 const timeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.hero',
     start: 'top top',
-    end: '+=7000',
+    end: () => window.innerWidth <= 768 ? '+=7000' : '+=10000',
     scrub: true,
     pin: '.hero__viewport',
   },
@@ -70,107 +95,189 @@ timeline
     scale: 1.05,
     xPercent: -1,
     yPercent: -1,
+    ease: 'none',
   })
   .to(images[0], {
     scale: 1.2,
     xPercent: 2,
     yPercent: 0,
     duration: 1,
+    ease: 'none',
   })
   .to(images[1], {
     opacity: 1,
     scale: 1.05,
     xPercent: -2,
     duration: 0.8,
+    ease: 'none',
   })
   .to(images[0], {
     opacity: 0,
     duration: 0.7,
+    ease: 'none',
   }, '<')
   .to(images[1], {
     scale: 1.22,
     xPercent: 2,
     yPercent: -1,
     duration: 1,
+    ease: 'none',
   })
   .to(images[2], {
     opacity: 1,
     scale: 1.05,
     xPercent: -2,
     duration: 0.8,
+    ease: 'none',
   })
   .to(images[1], {
     opacity: 0,
     duration: 0.7,
+    ease: 'none',
   }, '<')
   .to(images[2], {
     scale: 1.2,
     xPercent: 2,
     yPercent: 0,
     duration: 1,
+    ease: 'none',
   })
   .to(images[3], {
     opacity: 1,
     scale: 1.08,
     xPercent: 0,
     duration: 1,
+    ease: 'none',
   })
   .to(images[2], {
     opacity: 0,
     scale: 1.22,
     duration: 1,
+    ease: 'none',
   }, '<')
   .to(images[3], {
     scale: 1.16,
     duration: 1,
+    ease: 'none',
   })
   .to(images[4], {
     opacity: 1,
     scale: 1.08,
     xPercent: 0,
     duration: 1,
+    ease: 'none',
   })
   .to(images[3], {
     opacity: 0,
     scale: 1.2,
     duration: 1,
+    ease: 'none',
   }, '<')
   .to(images[4], {
     scale: 1.16,
     xPercent: 1,
     duration: 1,
+    ease: 'none',
   })
   .to(images[5], {
     opacity: 1,
     scale: 1.06,
     xPercent: -1,
     duration: 1,
+    ease: 'none',
   })
   .to(images[4], {
     opacity: 0,
     scale: 1.2,
     duration: 1,
+    ease: 'none',
   }, '<')
   .to(images[5], {
     scale: 1.16,
     xPercent: 2,
     yPercent: -1,
     duration: 1,
+    ease: 'none',
   })
   .to(images[6], {
     opacity: 1,
     scale: 1.05,
     xPercent: -2,
     duration: 1,
+    ease: 'none',
   })
   .to(images[5], {
     opacity: 0,
     scale: 1.2,
     duration: 1,
+    ease: 'none',
   }, '<')
   .to(images[6], {
     scale: 1.18,
     xPercent: 2,
     yPercent: -1,
     duration: 1,
+    ease: 'none',
   })
+  .to(images[7], {
+    opacity: 1,
+    scale: 1.05,
+    xPercent: -2,
+    duration: 1,
+    ease: 'none',
+  })
+  .to(images[6], {
+    opacity: 0,
+    scale: 1.2,
+    duration: 1,
+    ease: 'none',
+  }, '<')
+  .to(images[7], {
+    scale: 1.18,
+    xPercent: 2,
+    yPercent: -1,
+    duration: 1,
+    ease: 'none',
+  })
+
+  .to(images[8], {
+    opacity: 1,
+    scale: 1.04,
+    xPercent: -1,
+    duration: 1,
+    ease: 'none',
+  })
+  .to(images[7], {
+    opacity: 0,
+    scale: 1.18,
+    duration: 1,
+    ease: 'none',
+  }, '<')
+  .to(images[8], {
+    scale: 1.16,
+    xPercent: 2,
+    duration: 1,
+    ease: 'none',
+  })
+
+  .to(images[9], {
+    opacity: 1,
+    scale: 1.03,
+    xPercent: 0,
+    duration: 1,
+    ease: 'none',
+  })
+  .to(images[8], {
+    opacity: 0,
+    scale: 1.18,
+    duration: 1,
+    ease: 'none',
+  }, '<')
+  .to(images[9], {
+    scale: 1.1,
+    xPercent: 0,
+    yPercent: -1,
+    duration: 1.5,
+    ease: 'none',
+  })
+
