@@ -60,10 +60,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
        alt="View toward the National Library"
       />
       
-      <div class="hero__character" aria-hidden="true">
-        <div class="hero__vignette" aria-hidden="true">
-        </div>
-      </div>
+      <div class="hero__character" aria-hidden="true"></div>
+
+      <div class="hero__vignette" aria-hidden="true"></div>
 
       <div class="hero__label">
         <span>АРКА 123</span>
@@ -95,7 +94,6 @@ timeline
     scale: 1.05,
     xPercent: -1,
     yPercent: -1,
-    ease: 'none',
   })
   .to(images[0], {
     scale: 1.2,
