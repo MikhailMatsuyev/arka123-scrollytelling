@@ -79,6 +79,13 @@ gsap.set(images, {
   force3D: true,
 })
 
+images.forEach((image, index) => {
+  gsap.set(image, {
+    xPercent: index % 2 === 0 ? -1 : 1,
+    yPercent: index < 5 ? 0 : -1,
+  })
+})
+
 const timeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.hero',
@@ -97,15 +104,15 @@ timeline
   })
   .to(images[0], {
     scale: 1.2,
-    xPercent: 2,
+    xPercent: 1,
     yPercent: 0,
     duration: 1,
     ease: 'none',
   })
   .to(images[1], {
     opacity: 1,
-    scale: 1.03,
-    xPercent: -2,
+    scale: 0.98,
+    xPercent: -1,
     duration: 0.8,
     ease: 'none',
   })
@@ -117,15 +124,15 @@ timeline
   }, '<')
   .to(images[1], {
     scale: 1.2,
-    xPercent: 3,
+    xPercent: 1.5,
     yPercent: -1,
     duration: 1.5,
     ease: 'none',
   })
   .to(images[2], {
     opacity: 1,
-    scale: 1.03,
-    xPercent: -2,
+    scale: 0.98,
+    xPercent: -1,
     duration: 0.8,
     ease: 'none',
   })
@@ -137,7 +144,7 @@ timeline
   }, '<')
   .to(images[2], {
     scale: 1.22,
-    xPercent: 3,
+    xPercent: 1.5,
     yPercent: -1,
     duration: 1.5,
     ease: 'none',
@@ -177,7 +184,7 @@ timeline
   }, '<')
   .to(images[4], {
     scale: 1.18,
-    xPercent: 2,
+    xPercent: 1,
     yPercent: -1,
     duration: 2,
     ease: 'none',
@@ -197,7 +204,7 @@ timeline
   }, '<')
   .to(images[5], {
     scale: 1.18,
-    xPercent: 3,
+    xPercent: 1.5,
     yPercent: -2,
     duration: 2,
     ease: 'none',
@@ -205,7 +212,7 @@ timeline
   .to(images[6], {
     opacity: 1,
     scale: 1.05,
-    xPercent: -2,
+    xPercent: -1,
     duration: 1,
     ease: 'none',
   })
@@ -217,7 +224,7 @@ timeline
   }, '<')
   .to(images[6], {
     scale: 1.18,
-    xPercent: 2,
+    xPercent: 1,
     yPercent: -1,
     duration: 1,
     ease: 'none',
@@ -225,7 +232,7 @@ timeline
   .to(images[7], {
     opacity: 1,
     scale: 1.05,
-    xPercent: -2,
+    xPercent: -1,
     duration: 1,
     ease: 'none',
   })
@@ -237,7 +244,7 @@ timeline
   }, '<')
   .to(images[7], {
     scale: 1.18,
-    xPercent: 2,
+    xPercent: 1,
     yPercent: -1,
     duration: 1,
     ease: 'none',
@@ -258,7 +265,7 @@ timeline
   }, '<')
   .to(images[8], {
     scale: 1.16,
-    xPercent: 2,
+    xPercent: 1,
     duration: 1,
     ease: 'none',
   })
