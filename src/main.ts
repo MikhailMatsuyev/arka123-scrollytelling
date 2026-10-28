@@ -168,27 +168,23 @@ timeline
   })
   .to(images[3], {
     opacity: 1,
-    scale: 0.96,
+    scale: 1.02,
     xPercent: 0,
     duration: 1,
-    ease: "none",
+    ease: 'none',
   })
-  .to(
-    images[2],
-    {
-      opacity: 0,
-      scale: 1.3,
-      duration: 1,
-      ease: "none",
-    },
-    "<",
-  )
+  .to(images[2], {
+    opacity: 0,
+    scale: 1.26,
+    duration: 1,
+    ease: 'none',
+  }, '<')
   .to(images[3], {
-    scale: 1.2,
-    xPercent: 0.5,
+    scale: 1.18,
+    xPercent: 1,
     yPercent: -2,
     duration: 2,
-    ease: "none",
+    ease: 'none',
   })
   .to('.hero__character', {
     opacity: 1,
@@ -207,6 +203,12 @@ timeline
     xPercent: 0,
     duration: 1,
     ease: "none",
+  })
+  .to('.hero__character', {
+    opacity: 0,
+    y: -20,
+    duration: 0.8,
+    ease: 'none',
   })
   .to(
     images[3],
