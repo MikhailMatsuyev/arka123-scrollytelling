@@ -60,13 +60,11 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
        alt="View toward the National Library"
       />
       
-      <div class="hero__character" aria-hidden="true">
-        <img
-          class="hero__character-image"
-          src="${import.meta.env.BASE_URL}photos/hero-welcome.png"
-          alt=""
-        />
-      </div>
+      <img class="hero__character"
+        src="${import.meta.env.BASE_URL}characters/hero-welcome.png"
+        alt=""
+        aria-hidden="true"
+      />
 
       <div class="hero__vignette" aria-hidden="true"></div>
 
@@ -84,6 +82,11 @@ gsap.set(images, {
   transformOrigin: "center center",
   force3D: true,
 });
+
+gsap.set('.hero__character', {
+  y: 30,
+  force3D: true,
+})
 
 images.forEach((image, index) => {
   gsap.set(image, {
@@ -186,6 +189,17 @@ timeline
     yPercent: -2,
     duration: 2,
     ease: "none",
+  })
+  .to('.hero__character', {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    ease: 'none',
+  })
+  .to('.hero__character', {
+    y: -4,
+    duration: 1.2,
+    ease: 'none',
   })
   .to(images[4], {
     opacity: 1,
